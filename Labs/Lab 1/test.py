@@ -1,4 +1,4 @@
 str = ''#initializes string called str
 str = 'Yeet' #Sets value of str to 'Yeet'
 
-print(str) # Print string string
+print(str) #Print string str
