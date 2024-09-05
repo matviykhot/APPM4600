@@ -1,0 +1,3 @@
+arr = 'Yeet'
+
+print(arr)
