@@ -1,3 +1,3 @@
-arr = 'Yeet'
+str = 'Yeet' #
 
-print(arr)
+print(str)
