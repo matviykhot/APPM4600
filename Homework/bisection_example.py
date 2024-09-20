@@ -4,15 +4,15 @@ import numpy as np
 def driver():
 
 # use routines    
-    f = lambda x: 2*x-np.sin(x)-1
-    a = 0
-    b = 1
+    f = lambda x: (x-5) ** 9
+    a = 4.82
+    b = 5.2
 
 #    f = lambda x: np.sin(x)
 #    a = 0.1
 #    b = np.pi+0.1
 
-    tol = 1e-9
+    tol = 1e-4
     print('')
     [astar,ier,count] = bisection(f,a,b,tol)
     print('the approximate root is',astar)
@@ -76,3 +76,4 @@ def bisection(f,a,b,tol):
     return [astar, ier, count]
       
 driver()               
+
