@@ -4,7 +4,9 @@ import numpy as np
 def driver():
 
 # use routines
-    f = lambda x: x**9-45*x**8+900*x**7-10500*x**6+78750*x**5-393750*x**4+1312500*x**3-2812500*x**2+3515625*x-1953125
+    f = lambda x: (x**9 - 45*x**8 + 900*x**7 - 10500*x**6 + 78750*x**5
+            - 393750*x**4 + 1312500*x**3 - 2812500*x**2
+            + 3515625*x - 1953125)
     a = 4.82
     b = 5.2
 
@@ -12,7 +14,7 @@ def driver():
 #    a = 0.1
 #    b = np.pi+0.1
 
-    tol = 1e-4
+    tol = 1e-3
     print('')
     [astar,ier,count] = bisection(f,a,b,tol)
     print('the approximate root is',astar)
@@ -59,14 +61,14 @@ def bisection(f,a,b,tol):
     while (abs(d-a)> tol):
       fd = f(d)
       if (fd ==0):
-        astar = d
-        ier = 0
-        return [astar, ier, count]
+         astar = d
+         ier = 0
+         return [astar, ier, count]
       if (fa*fd<0):
          b = d
       else: 
-        a = d
-        fa = fd
+         a = d
+         fa = fd
       d = 0.5*(a+b)
       count = count +1
 #      print('abs(d-a) = ', abs(d-a))
@@ -77,3 +79,9 @@ def bisection(f,a,b,tol):
       
 driver()
 
+Terminal print
+
+the approximate root is 5.12875
+the error message reads: 0
+f(astar) = 0.0
+Iterations: 3
